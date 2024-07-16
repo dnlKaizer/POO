@@ -1,8 +1,8 @@
-public class Main {
+public class TestaParDeDados {
     public static void main(String[] args) throws Exception {
         ParDeDados parDeDados = new ParDeDados();
         int n = 300;
-        int quantidade = contarNumeroSeis(parDeDados, n);
+        int quantidade = contarNumeroN(parDeDados, n, 6);
         System.out.println(quantidade);
     }
 
@@ -24,10 +24,10 @@ public class Main {
         return quantidade;
     }
 
-    static int contarNumeroSeis(ParDeDados parDeDados, int nJogadas) {
+    static int contarNumeroN(ParDeDados parDeDados, int nJogadas, int n) {
         int quantidade = 0;
         for (int i = 0; i < nJogadas; i++) {
-            quantidade += verificarNumeroDados(rolar(parDeDados), 6);
+            quantidade += verificarNumeroDados(rolar(parDeDados), n);
         }
         return quantidade;
     }
