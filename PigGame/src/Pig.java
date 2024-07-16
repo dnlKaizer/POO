@@ -1,8 +1,8 @@
 public class Pig {
     private ParDeDados parDeDados = new ParDeDados();
-    private Jogador j1 = new Jogador();
-    private Jogador j2 = new Jogador();
-    private Jogador atual = j1;
+    private Jogador j1;
+    private Jogador j2;
+    private Jogador atual;
     private int pontosRodada = 0;
 
     public int getPontosRodada() {
@@ -25,6 +25,12 @@ public class Pig {
             }
         }
         return false;
+    }
+
+    public void start(Jogador j1, Jogador j2) {
+        this.j1 = j1;
+        this.j2 = j2;
+        this.atual = j1;
     }
 
     public int[] jogar() {
