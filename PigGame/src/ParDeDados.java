@@ -10,6 +10,12 @@ public class ParDeDados {
     public int getDado2() {
         return dado2;
     }
+    public int[] getDados() {
+        int[] dados = new int[2];
+        dados[0] = dado1;
+        dados[1] = dado2;
+        return dados;
+    }
 
     public void rolar() {
         Random random = new Random();
