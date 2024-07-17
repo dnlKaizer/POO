@@ -9,15 +9,6 @@ public class Pig {
         return pontosRodada;
     }
 
-    private void proxRodada() {
-        if (atual == j1) {
-            atual = j2;
-        } else {
-            atual = j1;
-        }
-        pontosRodada = 0;
-    }
-
     private boolean hasOne(int[] dados) {
         for (int i : dados) {
             if (i == 1) {
@@ -31,6 +22,15 @@ public class Pig {
         this.j1 = j1;
         this.j2 = j2;
         this.atual = j1;
+    }
+
+    public void proxRodada() {
+        if (atual == j1) {
+            atual = j2;
+        } else {
+            atual = j1;
+        }
+        pontosRodada = 0;
     }
 
     public int[] jogar() {
